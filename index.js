@@ -5,6 +5,7 @@ const server = new Hapi.Server();
 
 server.connection({port: 8080});
 
+// $lab:coverage:off$
 server.register({
     register: require('hapi-router'),
     options: {
@@ -25,3 +26,4 @@ if (require.main === module) {
 }else {
     module.exports = server;
 }
+// $lab:coverage:on$
